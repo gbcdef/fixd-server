@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+require('../index.js')
+var log = console.log.bind()
+var args = process.argv.slice(1)

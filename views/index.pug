@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title DesginGB
+    link(rel='stylesheet',href='./vendor/bootstrap.min.css')
+    link(rel='stylesheet',href='./vendor/main.css')
+  body
+    .container
+      .row
+        .col-xs-12
+          .page-header
+            h1 FIXD文档管理
+              | 
+              small by gbcdef
+          ul
+            each val in uxDirList
+              a(href= val.link)
+                li= val.basename
+                  span.pull-right= val.timeStr
+              
+  

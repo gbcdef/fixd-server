@@ -1,0 +1,30 @@
+html,body{
+  background-color: #f2f2f3;
+
+}
+.container{
+  max-width: 970px;
+  margin: auto;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+ul li{
+  margin:0.6em 0;
+  background-color:#fff;
+  padding: 0;
+  border: 1px solid #cbc0ba;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+}
+ul li:hover{
+  background-color: rgb(230, 242, 236);
+}
+ul a{
+  text-decoration: none;
+  color: #4d4e4f;
+}
+ul a:hover{
+  text-decoration: none;
+}

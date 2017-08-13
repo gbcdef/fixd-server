@@ -1,0 +1,24 @@
+{
+  "name": "fixd-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.4",
+    "pug": "^2.0.0-rc.3"
+  },
+  "devDependencies": {
+    "less": "^2.7.2",
+    "nodemon": "^1.11.0"
+  },
+  "bin": {
+    "fixd-server": "bin/fixd-server"
+  }
+}
