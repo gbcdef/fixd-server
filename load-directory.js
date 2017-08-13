@@ -2,12 +2,11 @@ var log = console.log.bind()
 var fs = require('fs')
 var path = require('path')
 
-function loadDirectory(target) {
+module.exports = function loadDirectory(target) {
 
-  target = target != undefined
-    ? target
-    : '../static'
-  var targetPath = path.resolve(__dirname, target)
+  if(target == undefined) return []
+
+  var targetPath = path.resolve( target)
   var uxDirList = []
 
   dirs = fs.readdirSync(targetPath)
@@ -22,7 +21,7 @@ function loadDirectory(target) {
         uxDirList.push({
           dir: d,
           basename: path.basename(d),
-          link: path.join(path.relative(__dirname, d),'index.html'),
+          link: path.join(path.relative(target, d),'index.html'),
           time: stats.mtime,
           timeStr: stats.mtime.toLocaleString(),
         })
@@ -34,8 +33,4 @@ function loadDirectory(target) {
   })
   // log(uxDirList)
   return uxDirList
-}
-
-module.exports = {
-  list: loadDirectory()
 }

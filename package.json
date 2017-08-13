@@ -12,13 +12,14 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "express": "^4.15.4",
-    "pug": "^2.0.0-rc.3"
+    "pug": "^2.0.0-rc.3",
+    "yargs": "^8.0.2"
   },
   "devDependencies": {
     "less": "^2.7.2",
     "nodemon": "^1.11.0"
   },
   "bin": {
-    "fixd-server": "bin/fixd-server"
+    "fixd": "bin/fixd-server"
   }
 }
