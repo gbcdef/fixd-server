@@ -1,20 +1,20 @@
 {
   "name": "fixd-server",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.1.0",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
+    "start": "nodemon ./src/index.js",
     "build": "babel src -d lib --copy-files"
   },
-  "author": "",
+  "author": "gbcdef <cgbvip@gmail.com>",
   "license": "MIT",
-  "description": "",
+  "description": "===",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "express": "^4.15.4",
     "pug": "^2.0.0-rc.3",
-    "yargs": "^8.0.2"
+    "yargs": "^8.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.0.0",
@@ -22,5 +22,18 @@
     "less": "^2.7.2",
     "nodemon": "^1.11.0"
   },
-  "bin": "./bin/index.js"
+  "bin": {
+    "fixd-server": "./bin/index.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbcdef/fixd-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gbcdef/fixd-server/issues"
+  },
+  "homepage": "https://github.com/gbcdef/fixd-server#readme"
 }
