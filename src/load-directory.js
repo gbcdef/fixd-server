@@ -9,10 +9,10 @@ module.exports = function loadDirectory(target) {
   var targetPath = path.resolve( target)
   var uxDirList = []
 
-  dirs = fs.readdirSync(targetPath)
+  var dirs = fs.readdirSync(targetPath)
 
-  for (dir of dirs) {
-    d = path.join(targetPath, dir)
+  for (var dir of dirs) {
+    var d = path.join(targetPath, dir)
     var stats = fs.statSync(d)
 
     if (stats.isDirectory()) {
