@@ -9,7 +9,7 @@
   },
   "author": "gbcdef <cgbvip@gmail.com>",
   "license": "MIT",
-  "description": "===",
+  "description": "Quickly serve static html design document",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "express": "^4.15.4",
