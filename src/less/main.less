@@ -1,6 +1,6 @@
 body,
 html {
-  background-color: #f2f2f3;
+    background-color: #f2f2f3;
 }
 
 .container {
@@ -19,8 +19,26 @@ html {
       border-radius: 4px;
       padding: 0.5em 1em;
 
-      :hover {
-        background-color: rgb(230, 242, 236);
+
+      &.item-dir-html {
+        &:hover {
+          background-color: rgb(230, 242, 236);
+        }
+      }
+      &.item-dir-normal {
+        background-color: #e8e8e8;
+        color: #9a9a9a;
+        &:hover {
+        }
+      }
+      &.item-file {
+        background-color: #e8e8e8;
+        color: #9a9a9a;
+        border: none;
+
+        &:hover {
+            background-color: #ddd;
+        }
       }
     }
 
@@ -28,8 +46,8 @@ html {
       text-decoration: none;
       color: #4d4e4f;
 
-      :hover {
-        text-decoration: none;
+      &:hover {
+          text-decoration: none;
       }
     }
   }

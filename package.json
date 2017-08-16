@@ -4,12 +4,12 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/index.js",
+    "dev": "nodemon ./src/index.js",
     "build": "babel src -d lib --copy-files"
   },
   "author": "gbcdef <cgbvip@gmail.com>",
   "license": "MIT",
-  "description": "Quickly serve static html design document",
+  "description": "Quickly establish a server for static html documents.",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "express": "^4.15.4",
@@ -35,5 +35,9 @@
   "bugs": {
     "url": "https://github.com/gbcdef/fixd-server/issues"
   },
-  "homepage": "https://github.com/gbcdef/fixd-server#readme"
+  "homepage": "https://github.com/gbcdef/fixd-server#readme",
+  "keywords": [
+    "prototyping",
+    "server"
+  ]
 }

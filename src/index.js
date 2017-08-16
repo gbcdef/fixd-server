@@ -21,33 +21,34 @@ var argv = require('yargs')
 
 var config = {
   docRoot: argv._[0],
+  port: argv.p,
 }
 
-var db = loadDirectory(config.docRoot)
 
 var app = express()
 
 app.set('views', path.resolve(__dirname, './views'))
 app.set('view engine', 'pug')
 
-// ixd docs
+// ixd docs folder
 app.use('/',express.static(config.docRoot))
 
 // bootstrap
 app.use('/vendor',express.static(path.resolve(__dirname, 'vendor')))
 
 app.get('/', function(req, res) {
-  // res.send('hello world')
+  var db = loadDirectory(config.docRoot)
   res.render('index', {
     uxDirList:db,
   })
 })
 
+
 app.listen(argv.port, function() {
   log('Running file server at:')
-  log('http://127.0.0.1:' + argv.p)
+  log('http://127.0.0.1:' + config.port)
   for (var ip of ipaddrs){
-    log('http://' + ip + ':' + argv.p)
+    log('http://' + ip + ':' + config.port)
 
   }
 })
