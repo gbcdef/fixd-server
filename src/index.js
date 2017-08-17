@@ -43,8 +43,7 @@ app.get('/', function(req, res) {
   })
 })
 
-
-app.listen(argv.port, function() {
+app.listen(config.port, function() {
   log('Running file server at:')
   log('http://127.0.0.1:' + config.port)
   for (var ip of ipaddrs){

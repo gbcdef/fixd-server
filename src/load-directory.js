@@ -6,8 +6,11 @@ module.exports = function loadDirectory(target) {
     if (target === undefined) return []
     var itemList = []
     var dirs = fs.readdirSync(target)
+    log(dirs)
     for (var dir of dirs) {
-        var d = path.resolve(target, dir)
+        dir = path.resolve(target, dir)
+        var item = calcItem(dir, target)
+        if (item == null) continue
         itemList.push(calcItem(dir, target))
     }
     itemList.sort((a, b) => {
@@ -28,6 +31,8 @@ function getPathType(dir, stats) {
 
 function calcItem(dir, target) {
     var d = dir
+    // ignore files and folders start with '.'
+    if (path.basename(d)[0] == '.') return null
     var stats = fs.statSync(d)
     var item = {
         dir: d,
