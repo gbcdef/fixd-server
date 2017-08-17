@@ -6,7 +6,6 @@ module.exports = function loadDirectory(target) {
     if (target === undefined) return []
     var itemList = []
     var dirs = fs.readdirSync(target)
-    log(dirs)
     for (var dir of dirs) {
         dir = path.resolve(target, dir)
         var item = calcItem(dir, target)
