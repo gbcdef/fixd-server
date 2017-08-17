@@ -37,13 +37,13 @@ $ fixd-server ~/Documents/Axure/HTML
 # Options
 选项
 
-Serve at perticular port:
+- `-p [num] --port [num]`
 
-指定服务器端口：
+Serve at perticular port.
 
-```bash
-$ fixd-server html -p 80
-```
+- '-v --verbose'
+
+Verbose mode.
 
 # License
 MIT

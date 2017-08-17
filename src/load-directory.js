@@ -48,7 +48,7 @@ function calcItem(dir, target) {
     if (item.type == 'dir_html') {
         item.link = path.join(path.relative(target, d), 'index.html')
     } else if (item.type == 'dir_normal') {
-        item.link = '#'
+        item.link = path.relative(target, d)
     } else {
         item.link = path.relative(target, d)
     }
