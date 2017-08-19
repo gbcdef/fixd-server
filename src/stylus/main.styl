@@ -1,0 +1,89 @@
+item-left-padding = 1em
+tablescale1 = 60%
+tablescale2 = 15%
+tablescale3 = 25%
+
+html, body
+	background-color #f4f8f9
+	
+	
+.container
+	max-width 970px
+	margin auto
+	padding-bottom 120px
+	
+	.page-header
+		color #5a5c5c
+		small
+			font-size 0.4em
+		a 
+			color #5a5c5c
+			&:hover
+				color #5a5c5c
+				
+	.table-title
+		padding 0.5em item-left-padding
+		color #78909c
+		.title-content
+			display inline-block
+			width tablescale1
+		.title-type
+			display inline-block
+			width tablescale2
+		.title-time
+			display inline-block
+			width tablescale3
+
+	.item-container
+		display block
+		margin 0.6em 0
+		background-color #fff
+		color #5e5e5e
+		border-radius 2px
+		padding 0.5em item-left-padding
+		&:hover
+			box-shadow 0 1px 8px rgba(0,0,0,0.15)
+			background-color #fff
+		.item-sub-content
+			display inline-block
+			width tablescale1
+		.item-sub-type
+			display inline-block
+			width tablescale2
+		.item-sub-time
+			display inline-block
+			width tablescale3
+		
+		.badge
+			color #fff
+			border-radius 4px
+			padding 0.2em 0.5em
+			
+			
+		.badge-html
+			color #fff
+			border-radius 4px
+			padding 0.2em 0.5em
+			background-color #6cac45
+			&:after
+				content 'html'
+		.badge-file
+			color #fff
+			border-radius 4px
+			padding 0.2em 0.5em
+			background-color #808080
+			&:after
+				content 'file'
+		.badge-dir
+			color #fff
+			border-radius 4px
+			padding 0.2em 0.5em
+			background-color #7c89ad
+			&:after
+				content 'dir'
+	a 
+		text-decoration none
+		&:hover
+			color #5e5e5e
+			
+				

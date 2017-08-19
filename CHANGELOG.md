@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.3.1 - 2017/08/19
+- migrate less to stylus
+- start using gulp
+- refined ui
+
 ## 0.3.0 - 2017/08/17
 - support recursively folder
 - add 'verbose' option

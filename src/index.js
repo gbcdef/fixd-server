@@ -49,7 +49,8 @@ app.get('/', function(req, res) {
   vlog(config.isVerbose, req)
   var db = loadDirectory(config.docRoot)
   res.render('index', {
-    uxDirList:db,
+    uxDirList: db,
+    currentDir: '/' + path.basename(config.docRoot),
   })
 })
 
@@ -57,12 +58,14 @@ app.get('/', function(req, res) {
 app.get('/:folder*',function(req,res){
   vlog(config.isVerbose, req)
   var subDir = path.join(config.docRoot, req.params.folder, req.params['0'])
-
+  var uiSubDir = path.join(path.basename(config.docRoot), req.params.folder, req.params['0'])
+  
   // cover '/robots.txt' etc.
   try {
     var db = loadDirectory(subDir)
     res.render('index', {
       uxDirList:db,
+      currentDir: '/' + uiSubDir,
     })
   }
   catch (err) {
