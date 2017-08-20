@@ -1,4 +1,4 @@
-[![downloads](https://img.shields.io/npm/dt/fixd-server.svg)](#)
+[![downloads](https://img.shields.io/npm/dt/fixd-server.svg)](https://www.npmjs.com/package/fixd-server)
 [![license](https://img.shields.io/badge/license-MIT_License-lightgrey.svg)](#)
 
 # fixd-server
@@ -34,6 +34,10 @@ $ npm i -g fixd-server
 $ fixd-server ~/Documents/Axure/HTML
 ```
 
+# Demo
+
+![](example/demo.png)
+
 # Options
 选项
 
@@ -41,7 +45,7 @@ $ fixd-server ~/Documents/Axure/HTML
 
 Serve at perticular port.
 
-- '-v --verbose'
+- `-v --verbose`
 
 Verbose mode.
 
