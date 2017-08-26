@@ -9,21 +9,21 @@ var vlog = require('./vlog')
 
 // argv
 var argv = require('yargs')
-.usage('$0 [options]')
-.options({
-  port: {
-    alias: 'p',
-    describe: 'Server port.',
-    type: 'number',
-    default: 3456,
-  },
-  verbose: {
-    alias: 'v',
-    describe: 'Verbose mode.',
-    type: 'boolean',
-    default: false,
-  },
-}).help()
+  .usage('$0 [options]')
+  .options({
+    port: {
+      alias: 'p',
+      describe: 'Server port.',
+      type: 'number',
+      default: 3456,
+    },
+    verbose: {
+      alias: 'v',
+      describe: 'Verbose mode.',
+      type: 'boolean',
+      default: false,
+    },
+  }).help()
   .argv
 
 var config = {

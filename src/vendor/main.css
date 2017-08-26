@@ -47,6 +47,8 @@ body {
   -webkit-box-shadow: 0 1px 8px rgba(0,0,0,0.15);
           box-shadow: 0 1px 8px rgba(0,0,0,0.15);
   background-color: #fff;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .container .item-container .item-sub-content {
   display: inline-block;
@@ -87,7 +89,7 @@ body {
   color: #fff;
   border-radius: 4px;
   padding: 0.2em 0.5em;
-  background-color: #7c89ad;
+  background-color: #7c89cd;
 }
 .container .item-container .badge-dir:after {
   content: 'dir';
