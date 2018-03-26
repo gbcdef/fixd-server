@@ -1,4 +1,3 @@
-
 var log = console.log.bind()
 
 var path = require('path')
@@ -32,20 +31,20 @@ var config = {
   isVerbose: argv.verbose,
 }
 
-if (config.docRoot === undefined ) config.docRoot = path.resolve('./')
+if (config.docRoot === undefined) config.docRoot = path.resolve('./')
 
 var app = express()
 
 app.set('views', path.resolve(__dirname, './views'))
 app.set('view engine', 'pug')
 
-// ixd docs folder
-app.use('/',express.static(config.docRoot))
+// 文档目录所在地址
+app.use('/', express.static(config.docRoot))
 
 // bootstrap
-app.use('/vendor',express.static(path.resolve(__dirname, 'vendor')))
+app.use('/vendor', express.static(path.resolve(__dirname, 'vendor')))
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
   vlog(config.isVerbose, req)
   var db = loadDirectory(config.docRoot)
   res.render('index', {
@@ -54,30 +53,34 @@ app.get('/', function(req, res) {
   })
 })
 
+// 收藏夹图标
+app.get('/favicon.ico', function (req, res) {
+  res.sendFile(path.join(__dirname, 'favicon.ico'))
+})
+
 // recursively router, 
-app.get('/:folder*',function(req,res){
+app.get('/:folder*', function (req, res) {
   vlog(config.isVerbose, req)
   var subDir = path.join(config.docRoot, req.params.folder, req.params['0'])
   var uiSubDir = path.join(path.basename(config.docRoot), req.params.folder, req.params['0'])
-  
+
   // cover '/robots.txt' etc.
   try {
     var db = loadDirectory(subDir)
     res.render('index', {
-      uxDirList:db,
+      uxDirList: db,
       currentDir: '/' + uiSubDir,
     })
-  }
-  catch (err) {
+  } catch (err) {
     res.send('404 Not Found')
   }
 
 })
 
-app.listen(config.port, function() {
+app.listen(config.port, function () {
   log('Running file server at:')
   log('http://127.0.0.1:' + config.port)
-  for (var ip of ipaddrs){
+  for (var ip of ipaddrs) {
     log('http://' + ip + ':' + config.port)
 
   }
